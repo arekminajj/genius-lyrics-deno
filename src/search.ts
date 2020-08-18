@@ -1,0 +1,15 @@
+import { Song } from './interfaces/song.ts'
+
+export async function Search(params: any) {
+  let queryString = "";
+  let url = "https://api.genius.com/search/?";
+  if (params) {
+    queryString = new URLSearchParams(params).toString();
+  }
+
+  const res = await fetch(url + queryString + "&per_page=1");
+  const data:Song = await res.json();
+
+  //for test return json
+  return data;
+}
