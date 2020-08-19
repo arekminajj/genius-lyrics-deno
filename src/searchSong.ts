@@ -1,6 +1,6 @@
 import { Song } from './interfaces/song.ts'
 
-export async function Search(params: any) {
+export async function searchSong(params: any) {
   let queryString = "";
   let url = "https://api.genius.com/search/?";
   if (params) {
