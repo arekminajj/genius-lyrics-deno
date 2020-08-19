@@ -10,6 +10,5 @@ export async function Search(params: any) {
   const res = await fetch(url + queryString + "&per_page=1");
   const data:Song = await res.json();
 
-  //for test return json
   return data;
 }

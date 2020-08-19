@@ -1,4 +1,6 @@
 import { Search } from "./src/search.ts";
+import { getLyrics } from './src/getLyrics.ts'
+import { scrap } from './src/scrap.ts'
 
 const params = {
   q: "witchblades",
@@ -7,3 +9,7 @@ const params = {
 };
 
 console.log(await Search(params));
+getLyrics("ds")
+//let res = await fetch("https://genius.com/songs/2977800");
+//console.log(await res.text());
+await scrap("/songs/5528463")
