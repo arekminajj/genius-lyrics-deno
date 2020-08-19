@@ -5,7 +5,7 @@ export async function Scrap(path: string) {
     const text = await response.text();
 
     const doc = new DOMParser().parseFromString(text, "text/html")!;
-    const p = doc.querySelector("p")!;
+    const p = doc.querySelector(".lyrics")!;
 
     return p.textContent;     
 }
