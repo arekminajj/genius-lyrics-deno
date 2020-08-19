@@ -1,4 +1,4 @@
-export interface Response {
+export interface songResponse {
     fullTitle: string;
     coverUrl: string;
     title: string;
