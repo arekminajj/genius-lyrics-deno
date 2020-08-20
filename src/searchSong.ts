@@ -1,5 +1,5 @@
 import { Song, Result  } from './interfaces/song.ts'
-import { Scrap } from './scrap.ts'
+import { getLyrics } from './scrap.ts'
 import { songResponse } from './interfaces/response.ts'
 
 export async function searchSong(params: any) {
@@ -11,7 +11,7 @@ export async function searchSong(params: any) {
 
   const res = await fetch(url + queryString + "&per_page=1");
   const data:Song = await res.json();
-  const lyrics = Scrap(data.response.hits[0].result.api_path);
+  const lyrics = await getLyrics(data.response.hits[0].result.api_path);
   const result: Result = data.response.hits[0].result;
 
   const song: songResponse = {
@@ -20,7 +20,7 @@ export async function searchSong(params: any) {
     title: result.title,
     titleWithFeatured: result.title_with_featured,
     primaryArtistName: result.primary_artist.name,
-    lyrics: await lyrics
+    lyrics: await lyrics!
   }
 
   return song;
