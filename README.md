@@ -1,3 +1,4 @@
+[![DeepScan grade](https://deepscan.io/api/teams/10623/projects/13467/branches/226932/badge/grade.svg)](https://deepscan.io/dashboard#view=project&tid=10623&pid=13467&bid=226932)
 # genius-lyrics-deno
 Deno module for Genius.com API and lyrics scraping.
 
