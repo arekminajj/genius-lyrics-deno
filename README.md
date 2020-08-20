@@ -3,7 +3,7 @@ Deno module for Genius.com API and lyrics scraping.
 
 ## Usage
 ```sh
-import { searchSong } from 'https://github.com/arekminajj/genius-lyrics-deno/blob/master/mod.ts'
+import { searchSong } from 'https://raw.githubusercontent.com/arekminajj/genius-lyrics-deno/master/mod.ts'
 
 const params = {
   q: "<QUERY>",
