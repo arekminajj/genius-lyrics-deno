@@ -1,6 +1,6 @@
 import { DOMParser } from "../deps.ts";
 
-export async function getLyrics(path: string) {
+export async function Scrap(path: string) {
     try {
         const response = await fetch("https://genius.com" + path);
         const text = await response.text();
@@ -10,7 +10,7 @@ export async function getLyrics(path: string) {
         return p.textContent;
     }    
     catch(error) {
-        await getLyrics(path)
+        await Scrap(path)
     }
     finally { }    
 }
