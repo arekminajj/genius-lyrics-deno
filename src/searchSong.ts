@@ -4,7 +4,7 @@ import { songResponse } from './interfaces/response.ts'
 
 export async function searchSong(params: any) {
   let queryString = "";
-  let url = "https://api.genius.com/search/?";
+  const url = "https://api.genius.com/search/?";
   if (params) {
     queryString = new URLSearchParams(params).toString();
   }
@@ -26,6 +26,6 @@ export async function searchSong(params: any) {
   if(song == (null || undefined)) {
     throw new Error("Something bad happened with song :(")
   }
-  
+
   return song;
 }
