@@ -10,3 +10,4 @@ Deno.test("getArtistIdTest", async () => {
     const result = await getArtistId(params);
     assertEquals(await result, 1015803);
   });
+  

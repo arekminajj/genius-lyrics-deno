@@ -11,3 +11,4 @@ Deno.test("searchArtistTest", async () => {
     const result:Artist = await searchArtist(params);
     assertEquals(await result.response.artist.name, "Lil Peep & Lil Tracy");
   });
+  
