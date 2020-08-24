@@ -23,9 +23,5 @@ export async function searchSong(params: any) {
     lyrics: await lyrics!
   }
 
-  if(song == (null || undefined)) {
-    throw new Error("Something bad happened with song :(")
-  }
-
   return song;
 }
