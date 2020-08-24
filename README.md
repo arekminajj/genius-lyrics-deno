@@ -4,7 +4,7 @@ Deno module for Genius.com API and lyrics scraping.
 
 ## Usage
 ```sh
-import { searchSong } from 'https://deno.land/x/genius_lyrics/mod.ts'
+import { searchSong, searchArtist, searchArtistSongs } from 'https://deno.land/x/genius_lyrics/mod.ts'
 
 const params = {
   q: "<QUERY>",
@@ -12,6 +12,8 @@ const params = {
 };
 
 const song = await searchSong(params);
+const artist = await searchArtist(params);
+const artistSongs = await searchArtistSongs(params);
 ```
 ## Contributing
 
